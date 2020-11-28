@@ -8,40 +8,71 @@ html, body {
 
 body {
   margin: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 button {
   font: inherit;
 }
 
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 0;
+}
 
 
 .game-of-life {
   display: flex;
   height: 100%;
   padding: 16px;
+  margin: auto;
+  max-width: 1200px;
 }
 
-.about {
-  flex: 1;
-
+.about__rule {
+  margin-bottom: 8px;
 }
 
 .universe {
   position: relative;
-  padding: 0 16px;
-  flex: 2;
+  padding: 4px 16px;
   display: flex;
   height: 100%;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
 }
-.universe__controls {
+.universe-controls {
   margin-bottom: 16px;
+  display: flex;
+  align-items: center;
 }
-.universe__canvas {
+.universe-controls__button {
+  margin-right: 12px;
+  min-width: 92px;
+  height: 36px;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid #9bd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.universe-controls__button:disabled {
+  border-color: #bdf;
+}
+.universe-controls__button:focus,
+.universe-controls__range-input:focus {
+  border: 2px solid #9bd;
+  box-shadow: 1px 1px 4px #9bd;
+}
+.universe-controls__range {
+  display: flex;
+  flex-direction: column;
+  height: 32px;
+}
+.universe-controls__range-input {
+  outline: none;
+  border: 1px solid #9bd;
+}
+.universe-canvas {
   border-radius: 4px;
   box-shadow: 1px 1px 4px #bbd;
 }

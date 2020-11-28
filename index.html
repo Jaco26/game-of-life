@@ -10,18 +10,47 @@
 
   <main class="game-of-life">
     <aside class="about">
-      <h1>Game Of Life</h1>
+      <h1>Conway's Game Of Life</h1>
+      <p>
+        <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">The wikipedia</a> article is worth a read. So is <a href="https://blogs.scientificamerican.com/observations/remembering-mathematical-magician-john-conway/">this</a>.
+      </p>
+      <p>
+        The grid on the right is made up of cells that can either be on or off ("alive" or "dead"). 
+      </p>
+      <p>
+        Click any cell to toggle between its two states.
+      </p>
+      <p>
+        Experiment with different configurations of "on" and "off" cells and press play to see it go.
+      </p>
+      <p>
+        Keep these rules in mind:
+        <ol>
+          <li class="about__rule">Any live cell with fewer than two live neighbors dies, as if by underpopulation.</li>
+          <li class="about__rule">Any live cell with two or three live neighbors lives on to the next generation.</li>
+          <li class="about__rule">Any live cell with more than three live neighbors dies, as if by overpopulation.</li>
+          <li class="about__rule">Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.</li>
+        </ol>
+      </p>
     </aside>
   
     <section class="universe">
-      <div class="universe__controls">
-        <button id="btn-tick">Tick</button>
+      <div class="universe-controls">
+        <button class="universe-controls__button" id="btn-play-pause">Play</button>
+        <button class="universe-controls__button" id="btn-frame">Frame</button>
+        <div class="universe-controls__range">
+          <label id="rng-speed-label" for="rng-speed">Speed:</label>
+          <input class="universe-controls__range-input" type="range" min="1" max="10" value="5" id="rng-speed">
+        </div>
       </div>
-      <canvas class="universe__canvas"></canvas>
+      <canvas class="universe-canvas"></canvas>
     </section>
   
   </main>
 
+  <script src="animation.js"></script>
+  <script src="universe.js"></script>
+  <script src="ui.js"></script>
   <script src="main.js"></script>
 
 </body>
