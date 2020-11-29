@@ -57,6 +57,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 .universe-controls__button:disabled {
   border-color: #bdf;
+  cursor: not-allowed;
 }
 .universe-controls__button:focus,
 .universe-controls__range-input:focus {
